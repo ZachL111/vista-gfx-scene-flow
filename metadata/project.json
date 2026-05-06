@@ -1,0 +1,32 @@
+{
+  "index": 584,
+  "phase": 2,
+  "batch": 65,
+  "name": "vista-gfx-scene-flow",
+  "planned_name": "vista-gfx-scene-flow",
+  "language": "Dart",
+  "category": "Graphics",
+  "goal": "Design a Dart verification harness for scene systems, covering simulation kernel, seeded input scenarios, and failure-oriented tests.",
+  "repository_url": "https://github.com/ZachL111/vista-gfx-scene-flow",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 169,
+    "risk_penalty": 5,
+    "latency_penalty": 4,
+    "weight_bonus": 3,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
