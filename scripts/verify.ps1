@@ -63,3 +63,9 @@ dart tests/test_policy.dart
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-vista-gfx-scene-detail.ps1
 
 dart tests/test_domain_review.dart
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-vista-gfx-scene-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-vista-gfx-scene-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
